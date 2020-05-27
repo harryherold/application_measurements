@@ -1,0 +1,16 @@
+# Set region filter
+export SCOREP_FILTERING_FILE="$RESNET50_DIR/resnet50.filt"
+
+# Set the experiment directory
+export SCOREP_EXPERIMENT_DIRECTORY="$RESNET50_DIR/resnet50-all-cpu-python-thread"
+
+# General settings
+export SCOREP_ENABLE_PROFILING=true
+export SCOREP_ENABLE_TRACING=false
+export SCOREP_TOTAL_MEMORY=3800M
+
+# Recording counter
+export SCOREP_METRIC_PAPI=PAPI_TOT_INS,PAPI_SP_OPS,PAPI_TOT_CYC
+
+# Disable CUDA devices
+export CUDA_VISIBLE_DEVICES="-1"

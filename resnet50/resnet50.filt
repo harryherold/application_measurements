@@ -1,0 +1,4 @@
+SCOREP_REGION_NAMES_BEGIN EXCLUDE
+google.protobuf.internal.python_message:getter
+google.protobuf.internal.python_message:Modified
+SCOREP_REGION_NAMES_END

@@ -1,0 +1,18 @@
+# Set region filter
+export SCOREP_FILTERING_FILE="$RESNET50_DIR/resnet50.filt"
+
+# Set the experiment directory
+export SCOREP_EXPERIMENT_DIRECTORY="$RESNET50_DIR/resnet50-real-improved-io-counter-trace"
+
+# Limit call path depth
+export SCOREP_PROFILING_MAX_CALLPATH_DEPTH=10
+
+# General settings
+export SCOREP_ENABLE_PROFILING=true
+export SCOREP_ENABLE_TRACING=false
+export SCOREP_TOTAL_MEMORY=3G
+
+# Configure GPU tracing
+export SCOREP_CUDA_BUFFER=4G
+export SCOREP_CUDA_BUFFER_CHUNK=1M
+export SCOREP_CUDA_ENABLE=kernel,memcpy,flushatexit,idle,kernel_counter
