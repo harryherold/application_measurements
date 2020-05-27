@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+# Set the experiment directory
+export SCOREP_EXPERIMENT_DIRECTORY="$PWD/cupy-matrix-profile"
+
+# Limit call path depth
+export SCOREP_PROFILING_MAX_CALLPATH_DEPTH=10
+
+# General settings
+export SCOREP_ENABLE_PROFILING=true
+export SCOREP_ENABLE_TRACING=false
+export SCOREP_TOTAL_MEMORY=2G
+
+# Configure GPU tracing
+export SCOREP_CUDA_BUFFER=5G
+export SCOREP_CUDA_BUFFER_CHUNK=1M
+export SCOREP_CUDA_ENABLE=runtime,driver,kernel,memcpy,flushatexit,sync,kernel_counter,idle
